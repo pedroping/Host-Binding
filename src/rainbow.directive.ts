@@ -28,9 +28,9 @@ export class RainbowDirective {
 
   @HostListener('keydown') newColor() {
     const colorPick = Math.floor(Math.random() * this.possibleColors.length);
+    this.borderColor = this.possibleColors[colorPick];
     this.color = this.possibleColors[colorPick];
     this.outline = 'none !important';
-    this.borderColor = this.possibleColors[colorPick];
   }
 
   @HostListener('focus') onFocus() {
